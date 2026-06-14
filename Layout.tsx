@@ -1,7 +1,7 @@
 // src/Layout.tsx
 import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import Navbar from "../frontend/src/components/Navbar";
+import Navbar from "./src/components/Navbar";
 
 const Layout: React.FC = () => {
   const location = useLocation();
