@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import { adminLogin } from "../../Services/adminApi";
 import type { AdminLoginPayload } from "../../Services/adminApi";
 import { useNavigate } from "react-router-dom";
@@ -29,6 +29,11 @@ const AdminLogin = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+  console.log("APP RUNNING");
+  console.log("ENV:", import.meta.env.VITE_API_BASE);
+}, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
