@@ -149,6 +149,8 @@ const DoctorSearchResults: React.FC = () => {
           : res.data?.doctors ?? res.data;
 
         setDoctors(data || []);
+        console.log("API DATA:", data);
+console.log("TOTAL DOCTORS:", data?.length);
       } catch (e) {
         console.error("Error fetching doctors:", e);
       } finally {
